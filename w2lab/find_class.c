@@ -2,7 +2,7 @@
 
 void findClasses(char* name, struct st_class* c[], int csize){
 	int count = 0;
-
+	char kname[2][10] = {"A+~F", "P/F"};
 	printf("Searching (keyword : %s)\n", name);
 	for(int i=0; i<csize; i++){
 		if(strstr(c[i]->name, name)){

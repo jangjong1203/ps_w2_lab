@@ -5,7 +5,7 @@ void editClass(struct st_class* c[], int csize){
 	int code;
 	printf(">> Enter a code of class > ");
 	scanf("%d", &code);
-
+	char kname[2][10] = {"A+~F", "P/F"};
 	
 	// You must complete this section.
 

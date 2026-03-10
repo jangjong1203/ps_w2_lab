@@ -4,8 +4,17 @@ int addNewClass(struct st_class* c[], int csize){
 
 	struct st_class* p = (struct st_class*)malloc(sizeof(struct st_class));
 
+
+
 	printf(">> code number > ");
 	scanf("%d", &(p->code));
+	for(int i=0;i<csize;i++){
+		if(p->code==c[i]->code){
+			printf("Duplicate subject code");
+			free(p);
+			return csize;
+		}
+	}
 	printf(">> class name > ");
 	scanf("%s", p->name);
 	printf(">> credits > ");
@@ -14,5 +23,6 @@ int addNewClass(struct st_class* c[], int csize){
 	scanf("%d", &(p->grading));
 
 	c[csize] = p;
+
 	return csize+1;
 }
