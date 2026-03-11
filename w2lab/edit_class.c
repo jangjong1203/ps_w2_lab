@@ -17,7 +17,6 @@ void editClass(struct st_class* c[], int csize){
 			printf("> Enter new grading(1:Grade, 2: P/F) > ");
 			scanf("%d", &(p->grading));
 			printf("> Modified.\n");
-			c[i]=p;
 			return;
 		}
 	}				
