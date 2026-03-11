@@ -18,12 +18,9 @@ void editClass(struct st_class* c[], int csize){
 			scanf("%d", &(p->grading));
 			printf("> Modified.\n");
 			c[i]=p;
-			break;
-		}else if(i==csize-1){
-			printf("No subject code");
 			return;
-		}	
+		}
 	}				
-
+	printf("No subject code");
 
 }
