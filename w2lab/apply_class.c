@@ -2,24 +2,48 @@
 
 int applyMyClasses(int my[], int msize, struct st_class* c[], int csize){
 	int number;
-	printf(">> code number > ");
-	scanf("%d", &number);
-	for(int i=0;i<csize;i++){
-		if(number==c[i]->code){	
+	for(int k=0;k<=1;){
+		for(int j=0;j<1;){
+			printf(">> code number > ");
+			scanf("%d", &number);
+			for(int i=0;i<csize;i++){
+				if(number==c[i]->code){	
+					j=1;
+					break;
+				}
+			}
+			if(j==0){
+				printf("Don't find subject code\n");
+				continue;
+			}
+			for(int i=0;i<msize;i++){
+				if(my[i]==number){
+					printf("Duplicate subject code\n");
+					j=0;
+					break;
+				}
+			if(j==0){
+				continue;
+			}
+		}
+		}
+		my[msize]=number;
+		msize++;
+		printf("add more?>(YES:1 NO:2)");
+		scanf("%d",&k);
+		if(k==1){
+			continue;
+		}else{
 			break;
-		}else if(i==csize-1){
-			printf("Don't find subject code\n");
-			return msize;
 		}
 	}
-	for(int i=0;i<msize;i++){
-		if(my[i]==number){
-			printf("Duplicate subject code\n");
-			return msize;
-		}
-	}
-	my[msize]=number;
-	msize++;
+
+
+
+
+
+
+
 	return msize;
 					
 	
