@@ -2,6 +2,7 @@
 
 int applyMyClasses(int my[], int msize, struct st_class* c[], int csize){
 	int number;
+	char kname[2][10] = {"A+~F", "P/F"};
 	for(int k=0;k<=1;){
 		for(int j=0;j<1;){
 			printf(">> code number > ");
@@ -27,6 +28,11 @@ int applyMyClasses(int my[], int msize, struct st_class* c[], int csize){
 			}
 		}
 		}
+		for(int i=0; i<csize; i++){
+			if(c[i]->code==number){
+				printf("[%d] %s [credit %d - %s]\n",c[i]->code, c[i]->name, c[i]->unit, kname[c[i]->grading-1]);
+			}
+		}
 		my[msize]=number;
 		msize++;
 		printf("add more?>(YES:1 NO:2)");
@@ -37,14 +43,5 @@ int applyMyClasses(int my[], int msize, struct st_class* c[], int csize){
 			break;
 		}
 	}
-
-
-
-
-
-
-
 	return msize;
-					
-	
 }
